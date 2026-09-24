@@ -1,0 +1,31 @@
+========================================================================
+             SISTEMA JABON V2 - PINES DE SEGURIDAD ACTUALES
+========================================================================
+Fecha y Hora de Generación: 24/09/2026 21:07:25
+
+------------------------------------------------------------------------
+1. PIN ADMINISTRATIVO (ACCESO GENERAL)
+------------------------------------------------------------------------
+   PIN: 1234
+   
+   Permite el acceso a:
+   - Gestión de Inventario (Productos, Stock, Precios)
+   - Catálogo Digital
+   - Historial de Ventas y Detalles de Transacciones
+   - Ajustes y Configuración del Negocio
+
+------------------------------------------------------------------------
+2. PIN GERENCIAL (CONTROL DE MATERIA PRIMA / INSUMOS)
+------------------------------------------------------------------------
+   PIN: 4321
+   
+   Permite el acceso a:
+   - Módulo de Insumos y Materia Prima
+   - Autorización de Bajas de Inventario por Elaboración
+
+------------------------------------------------------------------------
+NOTA DE SEGURIDAD:
+- Cada vez que ejecutes 'REINICIAR_PINES.cmd', el PIN anterior se borrará
+  de la base de datos y este archivo será reemplazado con los nuevos PINs.
+- Guarda este archivo o anota los PINs en un lugar seguro.
+========================================================================

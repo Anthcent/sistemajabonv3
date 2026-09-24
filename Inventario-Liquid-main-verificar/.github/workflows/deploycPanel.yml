@@ -1,0 +1,50 @@
+name: Deploy to InfinityFree via FTP
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    name: Deploy to InfinityFree
+    runs-on: ubuntu-latest
+    
+    steps:
+      # Paso 1: Checkout del código
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 2
+      
+      # Paso 2: Despliegue FTP a InfinityFree
+      - name: Deploy via FTP
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+        with:
+          # Credenciales FTP (configuradas en GitHub Secrets)
+          server: ${{ secrets.FTP_SERVER }}
+          username: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          
+          # Directorio remoto en el servidor (htdocs para InfinityFree)
+          server-dir: /htdocs/
+          
+          # Directorio local a subir (raíz del proyecto)
+          local-dir: ./
+          
+          # Archivos y carpetas a excluir del despliegue
+          exclude: |
+            **/.git*
+            **/.git*/**
+            **/node_modules/**
+            **/.github/**
+            **/README.md
+            **/CORRECCIONES.md
+            **/MODAL_BETA.md
+            **/.vscode/**
+            **/.idea/**
+            **/uploads/.gitkeep
+          
+          # Opciones adicionales
+          dangerous-clean-slate: false
+          log-level: verbose

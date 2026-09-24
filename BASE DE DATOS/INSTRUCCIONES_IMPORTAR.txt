@@ -1,0 +1,45 @@
+========================================================================
+GUÍA DE INSTALACIÓN E IMPORTACIÓN DE BASE DE DATOS - SISTEMA JABON V2
+========================================================================
+
+Esta carpeta contiene todo lo necesario para importar o restaurar la base de datos
+en cualquier computadora que tenga instalado XAMPP (o MySQL/MariaDB).
+
+------------------------------------------------------------------------
+MÉTODO 1: INSTALACIÓN AUTOMÁTICA EN 1 CLIC (RECOMENDADO)
+------------------------------------------------------------------------
+1. Asegúrate de tener XAMPP abierto y con el módulo MySQL iniciado (Start).
+2. Haz doble clic en el archivo:
+   "INSTALAR_BASE_DE_DATOS.cmd"
+3. Elige la opción 1 (Completa) o 2 (Limpia).
+4. ¡Listo! El script detecta MySQL, crea la base de datos y carga los datos.
+
+------------------------------------------------------------------------
+MÉTODO 2: IMPORTAR MANUALMENTE MEDIANTE PHPMYADMIN
+------------------------------------------------------------------------
+1. Abre tu navegador y entra a: http://localhost/phpmyadmin/
+2. En el menú superior, haz clic en la pestaña "Importar".
+3. Haz clic en "Seleccionar archivo" (Choose File).
+4. Selecciona cualquiera de estos archivos:
+   - "jabones_pos_db_completa.sql" (Recomendado: tiene todos los datos y productos)
+   O
+   - "jabones_pos_db_limpia.sql" (Estructura inicial en blanco para negocio nuevo)
+5. Baja hasta el final de la página y presiona el botón "Importar" (o "Continuar").
+6. ¡Listo! Los archivos ya contienen las instrucciones para crear automáticamente
+   la base de datos 'jabones_pos_db' si no existe.
+
+------------------------------------------------------------------------
+MÉTODO 3: POR LÍNEA DE COMANDOS (CMD / POWERSHELL)
+------------------------------------------------------------------------
+Abre una terminal CMD en esta carpeta y ejecuta:
+  C:\xampp\mysql\bin\mysql.exe -u root < jabones_pos_db_completa.sql
+
+------------------------------------------------------------------------
+ARCHIVOS INCLUIDOS EN ESTA CARPETA:
+------------------------------------------------------------------------
+- INSTALAR_BASE_DE_DATOS.cmd   -> Instalador interactivo automático en 1 clic.
+- jabones_pos_db_completa.sql  -> Base de datos con productos, ventas y configuración.
+- jabones_pos_db_limpia.sql    -> Base de datos en blanco lista para usar.
+- jabones_loader_db.sql        -> Base de datos del módulo Loader Móvil.
+- INSTALAR_TODO_COMPLETO.sql   -> Ambas bases de datos juntas (POS + Loader).
+========================================================================
