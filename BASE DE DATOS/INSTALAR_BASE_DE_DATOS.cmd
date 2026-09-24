@@ -1,4 +1,4 @@
-@echo off
+﻿@echo off
 chcp 65001 >nul
 title Instalador de Base de Datos - Sistema Jabones
 color 0b

@@ -20,8 +20,8 @@ if %ERRORLEVEL% equ 0 (
 ) else (
     echo.
     echo ======================================================================
-    echo  [ERROR] No se encontró el ejecutable php.exe de XAMPP.
-    echo  Asegúrate de que XAMPP esté instalado en C:\xampp o PHP en tu PATH.
+    echo  [ERROR] No se encontr? el ejecutable php.exe de XAMPP.
+    echo  Aseg?rate de que XAMPP est? instalado en C:\xampp o PHP en tu PATH.
     echo ======================================================================
     echo.
     pause
